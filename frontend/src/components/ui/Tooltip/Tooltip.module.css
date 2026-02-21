@@ -1,0 +1,44 @@
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.bubble {
+  position: absolute;
+  padding: 6px 10px;
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  z-index: 60;
+  pointer-events: none;
+  animation: fadeIn 150ms ease 300ms both;
+  box-shadow: var(--shadow-card);
+}
+
+.top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+}
+
+.bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+}
+
+.left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-6px);
+}
+
+.right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+}

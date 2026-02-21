@@ -1,0 +1,97 @@
+.controlBar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: #000000;
+  padding: 0.5rem;
+  border: 1px solid #222222;
+  border-radius: 0.5rem;
+  margin-bottom: 5px;
+}
+
+.searchBar {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.toolButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.toolBtnWrapper {
+  position: relative;
+}
+
+.toolBtn {
+  background-color: #111111;
+  border: 1px solid #333333;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toolBtn:hover {
+  background-color: #222222;
+  border-color: var(--color-accent);
+}
+
+.toolBtnActive {
+  background-color: #111111;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  z-index: 100;
+  min-width: 180px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.dropdownOption {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.dropdownOption:hover {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.dropdownOptionActive {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: var(--color-accent);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+}
+
+.tableSection {
+  background-color: #000000;
+  padding-top: 0;
+}

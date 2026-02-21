@@ -1,0 +1,129 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  background-color: #000000;
+  border-right: 1px solid #222222;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  transition: transform var(--transition-base);
+  box-shadow: 20px 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.collapsed {
+  transform: translateX(-100%);
+}
+
+.expanded {
+  transform: translateX(0);
+}
+
+.logoSection {
+  padding: 24px 20px;
+  border-bottom: 1px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f59e0b;
+}
+
+.nav {
+  flex: 1;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  padding: 0 24px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  color: #94a3b8;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border-left: 4px solid transparent;
+}
+
+.link:hover {
+  color: #ffffff;
+  background-color: #111111;
+}
+
+.linkActive {
+  border-left-color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userSection {
+  padding: 24px;
+  border-top: 1px solid #1a1a1a;
+  background-color: #050505;
+}
+
+.userName {
+  font-size: 1rem;
+  font-weight: var(--weight-medium);
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.roleBadge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #1a1a1a;
+  color: #f59e0b;
+  border: 1px solid #f59e0b;
+}
+
+.logoutBtn {
+  margin-top: 16px;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}

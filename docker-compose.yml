@@ -1,0 +1,54 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: fleetflow
+      POSTGRES_USER: fleetflow
+      POSTGRES_PASSWORD: fleetflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@fleetflow.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+  backend:
+    build: ./backend
+    command: npm run dev
+    working_dir: /app
+    environment:
+      DATABASE_URL: postgresql://fleetflow:fleetflow@db:5432/fleetflow?schema=public
+      JWT_SECRET: dev-secret-key-change-in-prod
+      JWT_EXPIRES_IN: 24h
+      PORT: 4000
+      CORS_ORIGIN: http://localhost:5173
+      NODE_ENV: development
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    command: npm run dev -- --host 0.0.0.0 --port 5173
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
+

@@ -1,0 +1,41 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  overflow: hidden;
+  position: relative;
+}
+
+.mainSlot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  transition: padding-left var(--transition-base);
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-8);
+  background-color: var(--color-bg-base);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.overlayVisible {
+  opacity: 1;
+  pointer-events: auto;
+}

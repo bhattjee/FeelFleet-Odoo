@@ -1,0 +1,33 @@
+.denied {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-danger);
+  margin-bottom: var(--space-2);
+}
+
+.message {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.backLink {
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}

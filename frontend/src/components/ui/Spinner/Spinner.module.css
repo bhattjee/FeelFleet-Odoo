@@ -1,0 +1,31 @@
+.root {
+  border-radius: 999px;
+  border-style: solid;
+  border-color: currentColor transparent transparent transparent;
+  animation: spin 700ms linear infinite;
+}
+
+.sm {
+  width: 14px;
+  height: 14px;
+  border-width: 2px;
+}
+
+.md {
+  width: 18px;
+  height: 18px;
+  border-width: 2px;
+}
+
+.lg {
+  width: 24px;
+  height: 24px;
+  border-width: 3px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+

@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Environment (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+backend/dist
+frontend/dist
+
+# Logs and temp files
+*.log
+backend/output.txt
+backend/tsc_errors.txt
+test-results.json
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea
+.vscode/
+*.local

@@ -1,0 +1,218 @@
+/* Theme & spacing – layout: control bar → table → New Trip Form button → inline form */
+.controlBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.searchBar {
+  flex: 1;
+  min-width: 220px;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+  font-size: var(--text-md);
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.searchBar::placeholder {
+  color: var(--color-text-muted);
+}
+
+.searchBar:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+.toolButtons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  position: relative;
+}
+
+.toolBtn {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-muted);
+  font-size: var(--text-md);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.toolBtn:hover {
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+  border-color: var(--color-accent);
+}
+
+.toolBtnActive {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.toolBtnWrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  min-width: 180px;
+  padding: var(--space-2);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-modal);
+  z-index: 10;
+}
+
+.dropdownOption {
+  display: block;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--color-text-primary);
+  font-size: var(--text-sm);
+  font-family: var(--font-body);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.dropdownOption:hover {
+  background-color: var(--color-bg-elevated);
+}
+
+.dropdownOptionActive {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: var(--color-accent);
+}
+
+.dropdownDivider {
+  display: block;
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--space-2) 0;
+}
+
+.tableSection {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+/* Exception: NEW TRIP FORM button below the table – left aligned */
+.newTripFormButtonRow {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: var(--space-4);
+}
+
+.newTripFormBtn {
+  border-radius: var(--radius-pill) !important;
+  padding: 10px 20px !important;
+  font-size: var(--text-md) !important;
+  font-weight: var(--weight-semibold) !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+.newTripFormRow {
+  margin-bottom: var(--space-4);
+}
+
+/* Inline form – appears below table when opened */
+.inlineForm {
+  margin-top: var(--space-4);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-surface);
+}
+
+/* Single-column form: all fields in sequence, one per row */
+.inlineFormFields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.alertRow {
+  margin-bottom: var(--space-4);
+}
+
+.confirmRow {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.actionCell {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.inlineActionBtn {
+  background: none;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.inlineActionBtn:hover {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.cancelAction {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.cancelAction:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+.confirmBtn {
+  padding: var(--space-3) var(--space-6) !important;
+  border-radius: var(--radius-md) !important;
+  font-size: var(--text-md) !important;
+  font-weight: var(--weight-semibold) !important;
+  border: 2px solid var(--color-success) !important;
+  background-color: var(--color-success) !important;
+  color: var(--color-text-inverse) !important;
+}
+
+.confirmBtn:hover {
+  filter: brightness(1.1);
+}
+
+.confirmBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,60 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+}
+
+.panel {
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-modal);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 200ms var(--transition-fast);
+}
+
+.sm {
+  width: 420px;
+}
+
+.md {
+  width: 560px;
+}
+
+.lg {
+  width: 720px;
+}
+
+.header {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+}
+
+.body {
+  padding: 16px 18px 18px;
+  overflow-y: auto;
+}
+
+.closeButton {
+  border: none;
+  background: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: var(--text-lg);
+}
+
