@@ -8,7 +8,7 @@ export class ExpenseService {
             where: filters,
             include: {
                 vehicle: true,
-                trip: true,
+                trip: { include: { driver: true } },
             },
             orderBy: { date: 'desc' },
         });

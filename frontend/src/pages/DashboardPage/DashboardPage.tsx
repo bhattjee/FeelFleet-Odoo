@@ -9,6 +9,7 @@ import { Badge } from '../../components/ui/Badge/Badge';
 import { PlusIcon, ChevronIcon } from '../../assets/icons';
 import { useAuth } from '../../context/AuthContext';
 import { ROUTES } from '../../constants/routes';
+import { api } from '../../api/client';
 import styles from './DashboardPage.module.css';
 
 const columns = [
@@ -77,10 +78,9 @@ export const DashboardPage: React.FC = () => {
     const fetchTrips = async () => {
       try {
         setIsLoadingTrips(true);
-        const res = await fetch('/api/trips?limit=10');
-        if (res.ok) {
-          const { data } = await res.json();
-          setTrips(data);
+        const res = await api.get<any>('/api/trips?limit=10');
+        if (res.success && res.data) {
+          setTrips(Array.isArray(res.data) ? res.data : (res.data as any).trips || []);
         }
       } catch (err) {
         console.error('Failed to fetch trips for dashboard:', err);
@@ -100,10 +100,9 @@ export const DashboardPage: React.FC = () => {
         if (filterType !== 'all') params.append('type', filterType);
         if (filterRegion !== 'all') params.append('region', filterRegion);
 
-        const res = await fetch(`/api/analytics/kpis?${params.toString()}`);
-        if (res.ok) {
-          const { data } = await res.json();
-          setKpis(data);
+        const res = await api.get<any>(`/api/analytics/kpis?${params.toString()}`);
+        if (res.success && res.data) {
+          setKpis(res.data);
         }
       } catch (err) {
         console.error('Failed to fetch KPIs:', err);
@@ -273,8 +272,8 @@ export const DashboardPage: React.FC = () => {
         {/* KPI Section */}
         <section className={styles.kpiSection}>
           <KPICard label="Active Fleet" value={kpis.activeFleet} alertLevel={kpis.activeFleet > 0 ? 'normal' : 'warning'} />
-          <KPICard label="Maintenance Alert" value={kpis.maintenanceAlerts} alertLevel={kpis.maintenanceAlerts > 0 ? 'warning' : 'normal'} />
-          <KPICard label="Utilization Rate" value={kpis.utilizationRate} unit="%" alertLevel={kpis.utilizationRate > 80 ? 'normal' : 'warning'} />
+          <KPICard label="Maintenance Alert" value={kpis.maintenanceAlerts} alertLevel="normal" />
+          <KPICard label="Utilization Rate" value={kpis.utilizationRate} unit="%" alertLevel="normal" />
           <KPICard label="Pending Cargo" value={kpis.pendingCargo} alertLevel={kpis.pendingCargo > 5 ? 'warning' : 'normal'} />
         </section>
 

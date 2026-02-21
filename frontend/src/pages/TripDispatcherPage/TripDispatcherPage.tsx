@@ -484,18 +484,18 @@ export const TripDispatcherPage: React.FC = () => {
                 <div className={styles.confirmRow}>
                   <Button
                     variant="secondary"
-                    className={styles.confirmBtn}
+                    className={styles.draftBtn}
                     onClick={() => handleCreateTrip('DRAFT')}
                     disabled={isCargoOverload}
                   >
                     Save as Draft
                   </Button>
                   <Button
-                    className={styles.confirmBtn}
+                    className={styles.dispatchBtn}
                     onClick={() => handleCreateTrip('DISPATCHED')}
                     disabled={isCargoOverload}
                   >
-                    Confirm & Dispatch Trip
+                    Confirm &amp; Dispatch Trip
                   </Button>
                 </div>
               </form>

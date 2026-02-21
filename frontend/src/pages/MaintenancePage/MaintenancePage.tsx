@@ -202,21 +202,7 @@ export const MaintenancePage: React.FC = () => {
       onLogout={logout}
     >
       <PageWrapper>
-        {/* Info/Documentation section */}
-        <section className={styles.infoSection}>
-          <div className={styles.infoCard}>
-            <h3>How Maintenance Tracking Works</h3>
-            <p>
-              When you log a <strong>NEW SERVICE</strong> (In Progress), the vehicle status automatically updates to
-              <span className={styles.statusInShop}> IN SHOP</span>.
-            </p>
-            <p>
-              While <strong>IN SHOP</strong>, the vehicle is automatically hidden from the Trip Dispatcher to prevent double-booking.
-              Once the service is marked as <strong>COMPLETED</strong>, the vehicle will return to
-              <span className={styles.statusAvailable}> AVAILABLE</span> for dispatching.
-            </p>
-          </div>
-        </section>
+
 
         {/* Universal: Search + Group by, Filter, Sort by only */}
         <section className={styles.controlBar}>

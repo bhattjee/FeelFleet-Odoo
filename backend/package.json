@@ -9,7 +9,8 @@
     "start": "node dist/server.js",
     "lint": "eslint src --ext ts",
     "db:generate": "prisma generate --schema=../database/prisma/schema.prisma",
-    "db:migrate": "prisma migrate dev --schema=../database/prisma/schema.prisma"
+    "db:migrate": "prisma migrate dev --schema=../database/prisma/schema.prisma",
+    "db:seed": "tsx src/scripts/seed_indian_data.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.2.1",
