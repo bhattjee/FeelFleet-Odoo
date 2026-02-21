@@ -37,21 +37,20 @@ FeelFleet-Odoo/
 │   │   └── server.ts        # start server, graceful shutdown
 │   ├── package.json
 │   └── tsconfig.json
-│
 ├── frontend/                # React SPA
 │   ├── src/
 │   │   ├── api/             # client, auth, vehicles, drivers, trips, maintenance
 │   │   ├── assets/icons/    # Dashboard, Truck, Route, Wrench, etc.
 │   │   ├── components/
-│   │   │   ├── dashboard/   # KPICard, modals (Trip, Vehicle, Driver, Fuel, Service, Expense), FleetFilterBar
+│   │   │   ├── dashboard/   # KPICard, modals, FleetFilterBar
 │   │   │   ├── layout/      # AppLayout, Sidebar, TopBar, PageWrapper
-│   │   │   └── ui/          # Button, Table, Modal, Input, Badge, Alert, Spinner, Select, Tooltip, EmptyState
+│   │   │   └── ui/          # Button, Table, Modal, Input, Badge, etc.
 │   │   ├── constants/       # roles, routes
 │   │   ├── context/         # AuthContext
-│   │   ├── pages/           # Dashboard, VehicleRegistry, TripDispatcher, Maintenance, Expense, Analytics, DriverProfile, Auth (Login/Register)
+│   │   ├── pages/           # Dashboard, VehicleRegistry, etc.
 │   │   ├── router/          # AppRouter, ProtectedRoute, RoleRoute
 │   │   ├── stores/          # layoutStore (Zustand)
-│   │   ├── styles/          # globals, variables, typography, animations
+│   │   ├── styles/          # globals, variables, typography
 │   │   ├── utils/           # formatRole
 │   │   ├── App.tsx
 │   │   └── main.tsx
@@ -59,16 +58,14 @@ FeelFleet-Odoo/
 │   ├── package.json
 │   ├── vite.config.ts
 │   └── tsconfig.json
-│
 ├── database/
 │   ├── prisma/
-│   │   ├── schema.prisma    # User, Vehicle, Driver, Trip, MaintenanceLog, Expense
+│   │   ├── schema.prisma    # User, Vehicle, Driver, Trip, etc.
 │   │   └── migrations/
-│   ├── seeds/               # seed.ts (alternate seed)
+│   ├── seeds/               # seed.ts
 │   └── schema/              # erd.md
-│
-├── docs/                    # API.md, SETUP.md, RBAC.md, WORKFLOW.md, CALCULATIONS.md
-├── docker-compose.yml       # db (Postgres), pgAdmin, backend, frontend
+├── docs/                    # API.md, SETUP.md, RBAC.md
+├── docker-compose.yml       # db, pgAdmin, backend, frontend
 ├── .gitignore
 └── README.md
 
@@ -110,13 +107,22 @@ prakash@feelfleet.in / password123 (Dispatcher)​
 
 ## Screenshots
 
-| Screen | Description                                 |
-|--------|---------------------------------------------|
-| <img src="docs/screenshots/dashboard.png" width="280" height="160" alt="Dashboard"> | Main dashboard – KPIs, filters, trips table |
-| <img src="docs/screenshots/vehicle-registry.png" width="280" height="160" alt="Vehicles"> | Vehicle list and registration         |
-| <img src="docs/screenshots/trip-dispatcher.png" width="280" height="160" alt="Trips"> | Create and manage trips                   |
-| <img src="docs/screenshots/maintenance.png" width="280" height="160" alt="Maintenance"> | Service logs and status                 |
-
+| Screen                                                                                              | Description                                 |
+| --------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| <img src="docs/screenshots/Login.png" width="280" height="160" alt="Login">                         | User login interface                        |
+| <img src="docs/screenshots/Signup.png" width="280" height="160" alt="Signup">                       | User registration form                      |
+| <img src="docs/screenshots/Signup Filled.png" width="280" height="160" alt="Signup Filled">         | Completed signup form                       |
+| <img src="docs/screenshots/Sidebar.png" width="280" height="160" alt="Sidebar">                     | Application navigation sidebar              |
+| <img src="docs/screenshots/Dashboard.png" width="280" height="160" alt="Dashboard">                 | Main dashboard – KPIs, filters, trips table |
+| <img src="docs/screenshots/Vehical Registory.png" width="280" height="160" alt="Vehicle Registry">  | Vehicle list and registration               |
+| <img src="docs/screenshots/Vehical Log Button.png" width="280" height="160" alt="Vehicle Log">      | Vehicle log entry button                    |
+| <img src="docs/screenshots/Trips.png" width="280" height="160" alt="Trips">                         | Trip management interface                   |
+| <img src="docs/screenshots/Service.png" width="280" height="160" alt="Service">                     | Maintenance service overview                |
+| <img src="docs/screenshots/Service Log Button.png" width="280" height="160" alt="Service Log">      | Service log entry button                    |
+| <img src="docs/screenshots/Expense and Fuel.png" width="280" height="160" alt="Expense & Fuel">     | Combined expense and fuel tracking          |
+| <img src="docs/screenshots/Fuel Log Buttons.png" width="280" height="160" alt="Fuel Logs">          | Fuel logging interface                      |
+| <img src="docs/screenshots/Deivers '&' Safety.png" width="280" height="160" alt="Drivers & Safety"> | Drivers and safety management               |
+| <img src="docs/screenshots/Analytics.png" width="280" height="160" alt="Analytics">                 | Analytics dashboard and KPIs                |
 
 Short description: login, dashboard, vehicle, trip, maintenance, and analytics.
 
