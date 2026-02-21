@@ -106,26 +106,31 @@ Explnation video link: https://files.catbox.moe/nddf0a.mp4
 
 # Features
 
-Auth & RBAC: Login/register, JWT in httpOnly cookie, roles: Manager, Dispatcher, Safety Officer, Financial Analyst.
-Dashboard: Active fleet, maintenance alerts, utilization rate, pending cargo, trips table with filters.
-Vehicle Registry: Add/edit, retire (out of service), filter by type/region.
-Trip Dispatcher: Create trip (capacity + license checks), dispatch → complete/cancel, vehicle/driver status.
-Maintenance: Service logs, vehicle → In Shop, complete → Available.
-Expenses & Fuel: Log fuel, vehicle total cost (fuel + maintenance).
-Analytics: KPIs, fuel efficiency, financial summary, costly vehicles.
-Driver Profiles: License expiry, duty status, completion rate.
+| Feature          | Description                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------------------- |
+| Auth & RBAC      | Login/register, JWT in httpOnly cookie, roles: Manager, Dispatcher, Safety Officer, Financial Analyst |
+| Dashboard        | Active fleet, maintenance alerts, utilization rate, pending cargo, trips table with filters           |
+| Vehicle Registry | Add/edit, retire (out of service), filter by type/region                                              |
+| Trip Dispatcher  | Create trip (capacity + license checks), dispatch → complete/cancel, vehicle/driver status            |
+| Maintenance      | Service logs, vehicle → In Shop, complete → Available                                                 |
+| Expenses & Fuel  | Log fuel, vehicle total cost (fuel + maintenance)                                                     |
+| Analytics        | KPIs, fuel efficiency, financial summary, costly vehicles                                             |
+| Driver Profiles  | License expiry, duty status, completion rate                                                          |
 
 # API Overview
-GET/POST /api/auth/* – login, register, logout, me
-GET/POST/PATCH /api/vehicles/* – list, create, update, retire, available
-GET/POST/PATCH /api/drivers/* – list, create, update, duty status, available
-GET/POST/PATCH /api/trips/* – list, create, update status
-GET/POST/PATCH /api/maintenance/* – logs, create, complete
-GET/POST /api/expenses/* – list, create, fuel, vehicle total
-GET /api/analytics/* – kpis, fuel-efficiency, financial-summary, costly-vehicles
 
-# Details: see docs/API.md.​
+| Endpoint           | Methods        | Description                                               |
+| ------------------ | -------------- | --------------------------------------------------------- |
+| /api/auth/*        | GET/POST       | login, register, logout, me                               |
+| /api/vehicles/*    | GET/POST/PATCH | list, create, update, retire, available                   |
+| /api/drivers/*     | GET/POST/PATCH | list, create, update, duty status, available              |
+| /api/trips/*       | GET/POST/PATCH | list, create, update status                               |
+| /api/maintenance/* | GET/POST/PATCH | logs, create, complete                                    |
+| /api/expenses/*    | GET/POST       | list, create, fuel, vehicle total                         |
+| /api/analytics/*   | GET            | kpis, fuel-efficiency, financial-summary, costly-vehicles |
 
-# License
-MIT License.
+Details: See docs/API.md
+
+License
+MIT License	Open source, permissive license for free use and modification
 ​
