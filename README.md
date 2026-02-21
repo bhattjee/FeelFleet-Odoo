@@ -88,13 +88,13 @@ prakash@feelfleet.in / password123 (Dispatcher)​
 | <img src="docs/screenshots/3.Signup_Filled.png" width="280" height="160" alt="Signup Filled">         | Completed signup form                       |
 | <img src="docs/screenshots/4.Sidebar.png" width="280" height="160" alt="Sidebar">                     | Application navigation sidebar              |
 | <img src="docs/screenshots/5.Dashboard.png" width="280" height="160" alt="Dashboard">                 | Main dashboard – KPIs, filters, trips table |
-| <img src="docs/screenshots/6.Vehical Registory.png" width="280" height="160" alt="Vehicle Registry">  | Vehicle list and registration               |
+| <img src="docs/screenshots/6.Vehical_Registory.png" width="280" height="160" alt="Vehicle Registry">  | Vehicle list and registration               |
 | <img src="docs/screenshots/7.Vehical_Log_Button.png" width="280" height="160" alt="Vehicle Log">      | Vehicle log entry button                    |
 | <img src="docs/screenshots/8.Trips.png" width="280" height="160" alt="Trips">                         | Trip management interface                   |
 | <img src="docs/screenshots/9.Service.png" width="280" height="160" alt="Service">                     | Maintenance service overview                |
 | <img src="docs/screenshots/10.Service_Log_Button.png" width="280" height="160" alt="Service Log">      | Service log entry button                    |
 | <img src="docs/screenshots/11.Expense_and_Fuel.png" width="280" height="160" alt="Expense & Fuel">     | Combined expense and fuel tracking          |
-| <img src="docs/screenshots/12.Fuel_Log_Buttons.png" width="280" height="160" alt="Fuel Logs">          | Fuel logging interface                      |
+| <img src="docs/screenshots/12.Fuel_Log_Button.png" width="280" height="160" alt="Fuel Logs">          | Fuel logging interface                      |
 | <img src="docs/screenshots/13.Deivers_and_Safety.png" width="280" height="160" alt="Drivers & Safety"> | Drivers and safety management               |
 | <img src="docs/screenshots/14.Analytics.png" width="280" height="160" alt="Analytics">                 | Analytics dashboard and KPIs                |
 
